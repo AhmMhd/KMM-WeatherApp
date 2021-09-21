@@ -1,6 +1,8 @@
 package com.abdulhakeem.weatherapp_kmm.usecases
 
 import com.abdulhakeem.weatherapp_kmm.fetchWeatherIconUrl
+import com.abdulhakeem.weatherapp_kmm.getDay
+import com.abdulhakeem.weatherapp_kmm.getDayOfWeek
 import com.abdulhakeem.weatherapp_kmm.kelvinToCelsius
 import com.abdulhakeem.weatherapp_kmm.model.DailyForecast
 import com.abdulhakeem.weatherapp_kmm.model.WeatherData
@@ -22,8 +24,10 @@ class FetchDailyForecastUC {
                     response.current.sunset,
                     response.current.temp.kelvinToCelsius(),
                     response.current.feels_like.kelvinToCelsius(),
-                    description = response.current.weather.firstOrNull()?.description?:"",
-                    icon = response.current.weather.firstOrNull()?.icon?.fetchWeatherIconUrl()?:""
+                    description = response.current.weather.firstOrNull()?.description ?: "",
+                    icon = response.current.weather.firstOrNull()?.icon?.fetchWeatherIconUrl()
+                        ?: "",
+                    day = response.current.dt.getDay()
                 )
                 val dailyWeatherData = ArrayList<WeatherData>()
                 response.daily.forEach {
@@ -34,7 +38,8 @@ class FetchDailyForecastUC {
                             it.temp.day.kelvinToCelsius(),
                             it.feels_like.day.kelvinToCelsius(),
                             description = "",
-                            icon = it.weather.firstOrNull()?.icon?.fetchWeatherIconUrl()?:""
+                            icon = it.weather.firstOrNull()?.icon?.fetchWeatherIconUrl() ?: "",
+                            day = it.dt.getDayOfWeek()
                         )
                     )
                 }

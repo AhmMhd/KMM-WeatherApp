@@ -17,7 +17,7 @@
             android:id="@+id/day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MUN"
+            android:text="@{data.day}"
             android:textColor="#3f4955"
             android:textSize="18sp"
             android:textStyle="bold"

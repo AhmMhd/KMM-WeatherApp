@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="42dp"
-            android:text="Sunday 23, Marchi"
+            android:text="@{data.todayWeatherData.day}"
             android:textColor="#3f4955"
             android:textSize="28sp"
             android:textStyle="bold"

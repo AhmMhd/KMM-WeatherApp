@@ -12,5 +12,6 @@ data class WeatherData(
     val temp: String? = null,
     val feels_like: String? = null,
     val description: String?= null,
-    val icon : String?=null
+    val icon : String?=null,
+    var day : String
 )
