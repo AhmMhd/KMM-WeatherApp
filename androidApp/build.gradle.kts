@@ -11,6 +11,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
 }
 
 android {
