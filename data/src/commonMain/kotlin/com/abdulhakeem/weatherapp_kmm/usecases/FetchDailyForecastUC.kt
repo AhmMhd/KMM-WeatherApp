@@ -1,5 +1,7 @@
 package com.abdulhakeem.weatherapp_kmm.usecases
 
+import com.abdulhakeem.weatherapp_kmm.fetchWeatherIconUrl
+import com.abdulhakeem.weatherapp_kmm.kelvinToCelsius
 import com.abdulhakeem.weatherapp_kmm.model.DailyForecast
 import com.abdulhakeem.weatherapp_kmm.model.WeatherData
 import com.abdulhakeem.weatherapp_kmm.model.request.DailyForecastRequest
@@ -18,8 +20,10 @@ class FetchDailyForecastUC {
                 val today = WeatherData(
                     response.current.sunrise,
                     response.current.sunset,
-                    response.current.temp,
-                    response.current.feels_like
+                    response.current.temp.kelvinToCelsius(),
+                    response.current.feels_like.kelvinToCelsius(),
+                    description = response.current.weather.firstOrNull()?.description?:"",
+                    icon = response.current.weather.firstOrNull()?.icon?.fetchWeatherIconUrl()?:""
                 )
                 val dailyWeatherData = ArrayList<WeatherData>()
                 response.daily.forEach {
@@ -27,8 +31,10 @@ class FetchDailyForecastUC {
                         WeatherData(
                             it.sunrise,
                             it.sunset,
-                            it.temp.day,
-                            it.feels_like.day
+                            it.temp.day.kelvinToCelsius(),
+                            it.feels_like.day.kelvinToCelsius(),
+                            description = "",
+                            icon = it.weather.firstOrNull()?.icon?.fetchWeatherIconUrl()?:""
                         )
                     )
                 }

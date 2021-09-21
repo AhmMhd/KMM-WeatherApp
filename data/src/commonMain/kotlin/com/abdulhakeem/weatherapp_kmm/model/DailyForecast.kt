@@ -9,6 +9,8 @@ data class DailyForecast(
 data class WeatherData(
     val sunrise: Long? = null,
     val sunset: Long? = null,
-    val temp: Double? = null,
-    val feels_like: Double? = null
+    val temp: String? = null,
+    val feels_like: String? = null,
+    val description: String?= null,
+    val icon : String?=null
 )
