@@ -3,4 +3,4 @@ Weather app.
 
 ![](preview-ios.png)
 
-![](preview-android.png)
+![](preview-android.jpg)
