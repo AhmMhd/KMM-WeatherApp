@@ -1,8 +1,14 @@
 PODS:
   - data (1.0)
+  - Kingfisher (7.1.1)
 
 DEPENDENCIES:
   - data (from `../data`)
+  - Kingfisher (~> 7.0)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
 
 EXTERNAL SOURCES:
   data:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   data: defa6f3f0598ed68640599cd448688a313bf6c1c
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
 
-PODFILE CHECKSUM: 0ca3a71b475a211a32eea6c7b3970f5799a3a7ac
+PODFILE CHECKSUM: a54dda1e21f2067387e1cf0aca5d167bc8ec62b8
 
 COCOAPODS: 1.10.2

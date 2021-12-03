@@ -12,5 +12,5 @@ class WeatherRepository{
         remote.fetchWeather(weatherRequest)
 
     suspend fun fetchDailyForecast(dailyForecastRequest: DailyForecastRequest) =
-        WeatherAPIServices.fetchDailyForecast(dailyForecastRequest)
+        remote.fetchDailyForecast(dailyForecastRequest)
 }
