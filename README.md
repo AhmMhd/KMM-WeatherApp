@@ -1,6 +1,6 @@
 # KMM-WeatherApp
 Weather app.
 
-![](preview-ios.gif)
+![](preview-ios.png)
 
-![](preview-android.gif)
+![](preview-android.png)
