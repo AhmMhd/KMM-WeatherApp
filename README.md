@@ -2,5 +2,5 @@
 Weather app.
 
 ![](preview-ios3.png).  ![](preview-android3.jpg)
-
+Android Preview           IOS Preview
 
